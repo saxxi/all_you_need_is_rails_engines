@@ -78,6 +78,9 @@ GEM
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
     ast (2.4.2)
+    automatic_namespaces (0.4.0)
+      activesupport
+      packs-rails
     base64 (0.2.0)
     better_html (2.1.1)
       actionview (>= 6.0)
@@ -100,6 +103,12 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
+    code_ownership (1.36.2)
+      code_teams (~> 1.0)
+      packs-specification
+      sorbet-runtime (>= 0.5.11249)
+    code_teams (1.0.2)
+      sorbet-runtime
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
     constant_resolver (0.2.0)
@@ -161,6 +170,22 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.5-x86_64-darwin)
       racc (~> 1.4)
+    packs (0.0.42)
+      bigdecimal
+      code_ownership (>= 1.33.0)
+      packs-specification
+      packwerk
+      parse_packwerk (>= 0.22.0, <= 0.23.0)
+      rainbow
+      sorbet-runtime
+      thor
+      tty-prompt
+    packs-rails (0.0.5)
+      activesupport
+      packs
+      railties
+    packs-specification (0.0.10)
+      sorbet-runtime
     packwerk (3.2.1)
       activesupport (>= 6.0)
       ast
@@ -173,9 +198,14 @@ GEM
       sorbet-runtime (>= 0.5.9914)
       zeitwerk (>= 2.6.1)
     parallel (1.24.0)
+    parse_packwerk (0.23.0)
+      bigdecimal
+      sorbet-runtime
     parser (3.3.1.0)
       ast (~> 2.4.1)
       racc
+    pastel (0.8.0)
+      tty-color (~> 0.5)
     prism (0.29.0)
     propshaft (0.9.0)
       actionpack (>= 7.0.0)
@@ -225,6 +255,7 @@ GEM
       rake (>= 12.2)
       thor (~> 1.0, >= 1.2.2)
       zeitwerk (~> 2.6)
+    rainbow (3.1.1)
     rake (13.2.1)
     rdoc (6.6.3.1)
       psych (>= 4.0.0)
@@ -266,6 +297,16 @@ GEM
     strscan (3.1.0)
     thor (1.3.1)
     timeout (0.4.1)
+    tty-color (0.6.0)
+    tty-cursor (0.7.1)
+    tty-prompt (0.23.1)
+      pastel (~> 0.8)
+      tty-reader (~> 0.8)
+    tty-reader (0.9.0)
+      tty-cursor (~> 0.7)
+      tty-screen (~> 0.8)
+      wisper (~> 2.0)
+    tty-screen (0.8.2)
     turbo-rails (2.0.5)
       actionpack (>= 6.0.0)
       activejob (>= 6.0.0)
@@ -286,6 +327,7 @@ GEM
     websocket-driver (0.7.6)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
+    wisper (2.0.1)
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.6.14)
@@ -295,12 +337,15 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  automatic_namespaces (~> 0.4.0)
   bootsnap
   capybara
   debug
   factory_bot_rails (~> 6.2)
   importmap-rails
   jbuilder
+  packs (~> 0.0.42)
+  packs-rails (~> 0.0.5)
   packwerk (~> 3.2)
   propshaft
   puma (~> 6.0)

@@ -17,6 +17,7 @@ class PackageLoader
 
   def load_all
     module_paths.each do |path|
+      puts "### #{path} ---"
       require_relative path
     end
   end

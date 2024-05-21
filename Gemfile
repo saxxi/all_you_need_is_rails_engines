@@ -70,5 +70,8 @@ group :test do
 end
 
 gem "packwerk", "~> 3.2"
-
 gem 'sitepress-rails', '~> 3.2', '>= 3.2.1'
+gem "packs", "~> 0.0.42"
+gem "packs-rails", "~> 0.0.5"
+
+gem "automatic_namespaces", "~> 0.4.0"
