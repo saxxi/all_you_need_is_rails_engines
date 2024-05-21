@@ -6,9 +6,16 @@ Rails.application.routes.draw do
     mount StudentApp::Engine, at: "/"
   end
 
-  # Mounting TeacherApp under /teacher path
   scope "/teacher" do
     mount TeacherApp::Engine, at: "/"
+  end
+
+  scope "/car" do
+    mount CarApp::Engine, at: "/"
+  end
+
+  scope "/truck" do
+    mount TruckApp::Engine, at: "/"
   end
 
   # Keep these routes last in this file to avoid presedence issues.

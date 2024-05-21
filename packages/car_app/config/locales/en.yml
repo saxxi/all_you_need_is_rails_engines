@@ -1,0 +1,5 @@
+en:
+  car_app:
+    home:
+      home:
+        greeting: "Hello from Car App home with locale"

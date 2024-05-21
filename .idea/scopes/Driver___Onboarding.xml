@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="Driver - Onboarding" pattern="file[elefante]:packages/driver_app/features/onboarding/*/**" />
-</component>

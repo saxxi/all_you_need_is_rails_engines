@@ -31,9 +31,9 @@ class PackageLoader
 
   def set_module_paths
     path_to_engines = Dir.glob("#{root_folder}/**/engine.rb", base: rails_root)
-    self.module_paths = path_to_engines.map do |path|
+    self.module_paths = path_to_engines.filter_map do |path|
       path_parts = path.split("/")[1..-2]
-      "#{["..", root_folder, *path_parts].join("/")}.rb"
+      path_parts.length > 2 ? "#{["..", root_folder, *path_parts].join("/")}.rb" : "../#{path}"
     end
   end
 end

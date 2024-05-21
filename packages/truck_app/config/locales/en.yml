@@ -1,0 +1,5 @@
+en:
+  truck_app:
+    home:
+      home:
+        greeting: "Hello from Truck App home with locale"
