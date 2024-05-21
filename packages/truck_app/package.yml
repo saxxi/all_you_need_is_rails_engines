@@ -19,5 +19,6 @@ enforce_dependencies: true
 # Note that packages in this list require their own `package.yml` file
 dependencies:
   - "packages/platform"
+  - "packages/car_app"
 metadata:
   automatic_pack_namespace: true
