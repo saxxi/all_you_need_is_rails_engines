@@ -17,8 +17,5 @@ enforce_dependencies: true
 
 # A list of this package's dependencies
 # Note that packages in this list require their own `package.yml` file
-dependencies:
-  - "packages/platform"
-  - "packages/student_app"
 metadata:
   automatic_pack_namespace: true
