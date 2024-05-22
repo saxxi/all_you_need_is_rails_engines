@@ -17,7 +17,6 @@ class PackageLoader
 
   def load_all
     module_paths.each do |path|
-      puts "### #{path} ---"
       require_relative path
     end
   end
@@ -33,7 +32,7 @@ class PackageLoader
     path_to_engines = Dir.glob("#{root_folder}/**/engine.rb", base: rails_root)
     self.module_paths = path_to_engines.filter_map do |path|
       path_parts = path.split("/")[1..-2]
-      path_parts.length > 2 ? "#{["..", root_folder, *path_parts].join("/")}.rb" : "../#{path}"
+      "../#{path}"
     end
   end
 end

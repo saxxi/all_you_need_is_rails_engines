@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teacher app</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+</head>
+<body>
+  <nav style="display:flex; gap: 30px; margin-bottom: 15px;">
+    <%= link_to 'Teacher Area', '/teacher' %>
+
+    <%= link_to '📝', teacher_app_sign_up_path rescue '(link not working)' %>
+    <%= link_to 'Sign up', '/teacher/sign_up' %>
+
+    <%= link_to '🚀', teacher_app_onboarding_path rescue '(link not working)' %>
+    <%= link_to 'Onboarding', '/teacher/onboarding' %>
+  </nav>
+
+  <%= yield %>
+</body>
+</html>

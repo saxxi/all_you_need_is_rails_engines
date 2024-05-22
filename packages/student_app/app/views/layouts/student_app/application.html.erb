@@ -8,8 +8,12 @@
   <%= stylesheet_link_tag "student_app/application", media: "all" %>
 </head>
 <body>
+  <nav style="display:flex; gap: 30px; margin-bottom: 15px;">
+    <%= link_to 'Teacher area', '/teacher' %>
+    <%= link_to 'Car area', '/car' %>
+    <%= link_to 'Truck area', '/truck' %>
+  </nav>
 
-<%= yield %>
-
+  <%= yield %>
 </body>
 </html>

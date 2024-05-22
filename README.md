@@ -1,11 +1,24 @@
 # All you need is Rails Engines
 
-This Rails app contains the code for a modularised Rails application using Rails Engines and Packwerk.
+Fork from [Julián Pinzón Eslava's demo](https://github.com/pinzonjulian/all_you_need_is_rails_engines) on modularizing large Ruby on Rails apps using engines.
 
-This readme will be properly updated in the next few days but you can explore the code and I'm sure you'll learn a lot!
+It also uses [automatic_namespaces](https://github.com/gap777/automatic_namespaces) in attempt to reduce the amount of nested folders, eg.
 
-The way to better understand what goes on into creating an app like this is to follow every commit which has a complete and thorough explanation of what happened so you'll be able to replicate it step by step if you want.
+```diff
+- packages/teacher_app/app/controllers/teacher_app/home_controller.rb
++ packages/teacher_app/app/controllers/home_controller.rb
+```
 
-* Note that all commits will talk about drivers and riders since the initial domain I modeled was a ride sharing application. I decided to change it for the talk at Rubyconf AU 2023 to be an app for music teacher and students. There is a commit renaming everything to match this.
+## Setup & Run
 
-🤘
+```bash
+rake db:create db:migrate
+rails s
+```
+
+## Pack / Packwerk
+
+```sh
+$ packs check
+$ packs validate
+```
