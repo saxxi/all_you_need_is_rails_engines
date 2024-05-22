@@ -328,7 +328,6 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   packs (~> 0.0.42)
-  packs-rails (~> 0.0.5)
   packwerk (~> 3.2)
   propshaft
   puma (~> 6.0)

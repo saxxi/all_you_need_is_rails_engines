@@ -7,13 +7,9 @@
 </head>
 <body>
   <nav style="display:flex; gap: 30px; margin-bottom: 15px;">
-    <%= link_to 'Teacher Area', '/teacher' %>
-
-    <%= link_to '📝', teacher_app_sign_up_path rescue '(link not working)' %>
-    <%= link_to 'Sign up', '/teacher/sign_up' %>
-
-    <%= link_to '🚀', teacher_app_onboarding_path rescue '(link not working)' %>
-    <%= link_to 'Onboarding', '/teacher/onboarding' %>
+    <%= link_to 'Teacher Area', main_app.routes.url_helpers.teacher_app_path %>
+    <%= link_to 'Sign up', TeacherApp::Engine.routes.url_helpers.sign_up_path %>
+    <%= link_to 'Onboarding', TeacherApp::Engine.routes.url_helpers.onboarding_path %>
   </nav>
 
   <%= yield %>

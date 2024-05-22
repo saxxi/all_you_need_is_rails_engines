@@ -21,4 +21,5 @@ dependencies:
   - "packages/platform"
   - "packages/car_app"
 metadata:
+  engine: true
   automatic_pack_namespace: true

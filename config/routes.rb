@@ -3,18 +3,9 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   mount StudentApp::Engine, at: "/"
-
-  scope "/teacher" do
-    mount TeacherApp::Engine, at: "/"
-  end
-
-  scope "/car" do
-    mount CarApp::Engine, at: "/"
-  end
-
-  scope "/truck" do
-    mount TruckApp::Engine, at: "/"
-  end
+  mount TeacherApp::Engine, at: "/teacher", as: :teacher_app
+  mount CarApp::Engine, at: "/car", as: :car_app
+  mount TruckApp::Engine, at: "/truck", as: :truck_app
 
   # Keep these routes last in this file to avoid presedence issues.
   # E.g. if these were at the top:

@@ -20,4 +20,5 @@ enforce_dependencies: true
 dependencies:
   - "packages/platform"
 metadata:
+  engine: true
   automatic_pack_namespace: true
