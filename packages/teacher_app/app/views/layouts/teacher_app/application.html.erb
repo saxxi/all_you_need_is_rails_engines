@@ -12,6 +12,12 @@
     <%= link_to 'Onboarding', TeacherApp::Engine.routes.url_helpers.onboarding_path %>
   </nav>
 
+  <% flash.each do |key, value| %>
+    <div style="color: <%= { 'success' => 'green', 'notice' => 'blue', 'error' => 'red' }[key] || 'orange' %>">
+      <%= value %>
+    </div>
+  <% end %>
+
   <%= yield %>
 </body>
 </html>

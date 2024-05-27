@@ -1,0 +1,11 @@
+<h1>Start a course</h1>
+
+List of courses (retrieved from TeacherApp):
+
+<ul>
+  <% @courses.each do |course| %>
+    <li><%= course %></li>
+  <% end %>
+</ul>
+
+<%= link_to "home", student_app_root_path %>

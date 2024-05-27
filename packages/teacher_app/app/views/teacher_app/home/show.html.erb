@@ -1,1 +1,8 @@
 <p>I'm the Teacher's home page!</p>
+
+List of student requests:
+
+<ul>
+  <li><%= button_to "Confirm student George", course_confirm_student_path(course_id: 123, student: 'george'), method: :post %></li>
+  <li><%= button_to "Confirm student Pierre", course_confirm_student_path(course_id: 123, student: 'pierre'), method: :post %></li>
+</ul>

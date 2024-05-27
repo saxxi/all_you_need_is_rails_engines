@@ -9,6 +9,12 @@ It also uses [automatic_namespaces](https://github.com/gap777/automatic_namespac
 + packages/teacher_app/app/controllers/home_controller.rb
 ```
 
+## Avoid Circular Dependency
+
+In this demo StudentApp depends on TeacherApp so it can easily look up courses.
+We are avoiding circular dependency on Teacher confirming a student on a course
+by dispatching a notification using `ActiveSupport::Notifications`.
+
 ## Setup & Run
 
 ```bash
